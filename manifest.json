@@ -1,0 +1,16 @@
+{
+  "name": "Workout Routine Tracker",
+  "short_name": "Workout",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./Schedule 03  Workout Routine Created By Cutus Gdhd_files/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,3219 @@
+/*
+== ------------------------------------------------------------------- ==
+== @@ Feedback Panel (general.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_feedback_panel {
+  text-align: center;
+  padding: 40px 40px;
+  border: 1px solid #ebeaea;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_feedback_panel .heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.wpt_feedback_panel .heading .title,
+.wpt_feedback_panel .heading .subtitle {
+  margin: 0;
+  padding: 0;
+}
+.wpt_feedback_panel .heading .title {
+  margin-bottom: 5px;
+}
+.wpt_feedback_panel .heading .title:last-child {
+  margin-bottom: 0;
+}
+.wpt_feedback_panel .actions {
+  margin-top: 25px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Heading (general.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_heading {
+  text-align: center;
+}
+.wpt_heading .title {
+  margin-bottom: 5px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ WPT Teasers (general.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_teasers.wpt_grid_fitrows,
+.wpt_teasers.wpt_grid_masonry {
+  display: block;
+  zoom: 1;
+  margin: 0 -1.6%;
+}
+.wpt_teasers.wpt_grid_fitrows:after,
+.wpt_teasers.wpt_grid_masonry:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_teasers.wpt_grid_fitrows .entry,
+.wpt_teasers.wpt_grid_masonry .entry {
+  float: left;
+  width: 25%;
+  padding: 0 1.6% 3.2%;
+}
+.wpt_teasers.wpt_grid_fitrows.w_1cols .entry,
+.wpt_teasers.wpt_grid_masonry.w_1cols .entry {
+  width: 100%;
+}
+.wpt_teasers.wpt_grid_fitrows.w_2cols .entry,
+.wpt_teasers.wpt_grid_masonry.w_2cols .entry {
+  width: 50%;
+}
+.wpt_teasers.wpt_grid_fitrows.w_3cols .entry,
+.wpt_teasers.wpt_grid_masonry.w_3cols .entry {
+  width: 33.3%;
+}
+.wpt_teasers.wpt_grid_fitrows.w_4cols .entry,
+.wpt_teasers.wpt_grid_masonry.w_4cols .entry {
+  width: 25%;
+}
+.wpt_teasers.wpt_carousel {
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+  /*
+		// FOUC preventing
+		opacity: 0;
+		.transition(opacity 0.4s ease);
+
+		&.is_hidden { display: none; }
+		&.flickity-enabled { opacity: 1; }
+		*/
+}
+.wpt_teasers.wpt_carousel:before,
+.wpt_teasers.wpt_carousel:after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 100%;
+  background: #FFF;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+.wpt_teasers.wpt_carousel:before {
+  left: 0;
+}
+.wpt_teasers.wpt_carousel:after {
+  right: 0;
+}
+.wpt_teasers.wpt_carousel .flickity-prev-next-button {
+  z-index: 6;
+  background: transparent;
+  -webkit-opacity: 0.1;
+  -moz-opacity: 0.1;
+  opacity: 0.1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.wpt_teasers.wpt_carousel .flickity-prev-next-button svg {
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+}
+.wpt_teasers.wpt_carousel .flickity-prev-next-button.previous {
+  left: -30px;
+}
+.wpt_teasers.wpt_carousel .flickity-prev-next-button.next {
+  right: -30px;
+}
+.wpt_teasers.wpt_carousel .flickity-prev-next-button:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.wpt_teasers.wpt_carousel:hover .flickity-prev-next-button {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_teasers.wpt_carousel .entry {
+  width: 33.3%;
+  float: left;
+}
+.wpt_teasers.wpt_carousel .entry > .wrapper {
+  margin: 0 15px;
+}
+.wpt_teasers.wpt_carousel.w_1cols .entry {
+  width: 100%;
+}
+.wpt_teasers.wpt_carousel.w_2cols .entry {
+  width: 50%;
+}
+.wpt_teasers.wpt_carousel.w_3cols .entry {
+  width: 33.3%;
+}
+.wpt_teasers.wpt_carousel.w_4cols .entry {
+  width: 25%;
+}
+.wpt_teasers.wpt_condensed .entry {
+  position: relative;
+  text-align: center;
+}
+.wpt_teasers.wpt_condensed .entry > .wrapper {
+  position: relative;
+}
+.wpt_teasers.wpt_condensed .entry .thumbnail > * {
+  display: block;
+  padding-bottom: 66px;
+}
+.wpt_teasers.wpt_condensed .entry .thumbnail,
+.wpt_teasers.wpt_condensed .entry .thumbnail img {
+  -webkit-border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 6px;
+}
+.wpt_teasers.wpt_condensed .entry .details {
+  background: #FFF;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ebeaea;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 0;
+}
+.wpt_teasers.wpt_condensed .entry .body_area {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.wpt_teasers.wpt_condensed .entry .body_area .wrapper,
+.wpt_teasers.wpt_condensed .entry .body_area .excerpt,
+.wpt_teasers.wpt_condensed .entry .body_area .permalink {
+  margin-top: 7px;
+}
+.wpt_teasers.wpt_condensed .entry .body_area .sc85_rating_stars_shortcode {
+  display: block;
+}
+.wpt_teasers.wpt_condensed .entry .body_area .wrapper {
+  margin-top: 5px;
+}
+.wpt_teasers.wpt_condensed .entry .body_area .more {
+  font-size: 14px;
+  padding: 8px 14px;
+}
+.wpt_teasers.wpt_condensed .entry .body_area .excerpt {
+  margin-bottom: 0 !important;
+}
+.wpt_teasers.wpt_condensed .entry .body_area .extra_info {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 0.85em;
+}
+.wpt_teasers.wpt_condensed .entry .body_area .extra_info span {
+  padding: 0 5px;
+}
+.wpt_teasers.wpt_condensed .entry:hover .body_area {
+  position: relative;
+  -webkit-transition: all 0.2s ease 0.1s;
+  transition: all 0.2s ease 0.1s;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Exercise Single (exercises.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_exercise_single .exercise_specs {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: solid 1px #ccc;
+}
+.wpt_exercise_single .exercise_specs > .wrapper {
+  margin: 0 -40px;
+  margin-bottom: -20px;
+  display: block;
+  zoom: 1;
+}
+.wpt_exercise_single .exercise_specs > .wrapper:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_exercise_single .exercise_specs .spec_group {
+  float: left;
+  width: 33.3%;
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+.wpt_exercise_single .exercise_specs .sc85_post_sharing_links {
+  display: inline;
+  margin: 0 -2px;
+}
+.wpt_exercise_single .exercise_specs .sc85_post_sharing_links a {
+  margin: 0 2px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Exercise Archive (exercises.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_exercise_archive .exercise_filters {
+  background: #f9f9f9;
+  border: solid 1px #e3e3e3;
+  margin-bottom: 0;
+  padding: 20px 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.wpt_exercise_archive .exercise_filters .wrap {
+  display: inline-block;
+  margin: 0 15px;
+}
+.wpt_exercise_archive .exercise_filters .label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.wpt_exercise_archive .exercise_filters select {
+  width: 180px;
+  vertical-align: middle;
+}
+.wpt_exercise_archive .exercise_filters .label,
+.wpt_exercise_archive .exercise_filters select {
+  margin-bottom: 10px;
+}
+.wpt_exercise_archive .exercise_filters .clear_filters {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: absolute;
+  margin-top: 7px;
+}
+.wpt_exercise_archive .exercise_filters .clear_filters:before {
+  content: 'x';
+}
+.wpt_exercise_archive .exercise_filters:hover .clear_filters {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_exercise_archive .entry {
+  display: block;
+  zoom: 1;
+  padding: 30px 0;
+  border-bottom: 1px solid #dedede;
+}
+.wpt_exercise_archive .entry:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_exercise_archive .entry:last-child {
+  margin-bottom: 0;
+}
+.wpt_exercise_archive .entry .main_info {
+  float: left;
+  width: 43%;
+}
+.wpt_exercise_archive .entry .thumbnails {
+  float: left;
+  width: 40%;
+  height: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  text-align: center;
+}
+.wpt_exercise_archive .entry .thumbnails img {
+  height: 100%;
+}
+.wpt_exercise_archive .entry .actions {
+  text-align: right;
+  float: right;
+  width: 17%;
+  height: 75px;
+  line-height: 75px;
+  /*
+			.wrapper {
+				display: table;
+				float: right;
+			}
+
+			.wrapper > * {
+				display: table;
+				float: right;
+			}
+*/
+}
+.wpt_exercise_archive .entry .exercise_meta {
+  font-size: 0.85em;
+  margin-bottom: 2px;
+}
+.wpt_exercise_archive .entry .exercise_meta label {
+  font-weight: 600;
+}
+.wpt_exercise_archive .pagination {
+  margin-top: 35px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Exercises Teasers Shortcode (exercises.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_exercises_teasers_shortcode .details {
+  padding-top: 14px;
+}
+.wpt_exercises_teasers_shortcode .title {
+  margin: 0;
+}
+.wpt_exercises_teasers_shortcode .excerpt {
+  margin-top: 7px;
+}
+.wpt_exercises_teasers_shortcode .more {
+  display: inline-block;
+  margin-top: 7px;
+}
+.wpt_exercises_teasers_shortcode .button {
+  margin-top: 10px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Exercises Set Shortcode (exercises.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_exercises_set .entry {
+  display: block;
+  zoom: 1;
+  padding: 25px 0;
+  border-bottom: 1px solid #dedede;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.wpt_exercises_set .entry:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_exercises_set .entry:first-child {
+  border-top: 1px solid #dedede;
+}
+.wpt_exercises_set .main_info {
+  float: left;
+  width: 35%;
+}
+.wpt_exercises_set .main_info .count {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.wpt_exercises_set .main_info .count a {
+  color: inherit;
+}
+.wpt_exercises_set .main_info .title {
+  margin-top: 1px;
+  margin-bottom: 6px;
+  font-size: 1.15em;
+  line-height: 1.3;
+}
+.wpt_exercises_set .main_info .title a {
+  color: inherit;
+}
+.wpt_exercises_set .main_info .equipment {
+  font-size: 0.85em;
+}
+.wpt_exercises_set .main_info .equipment label {
+  font-weight: 600;
+}
+.wpt_exercises_set .main_info .more {
+  font-size: 0.85em;
+  font-weight: 600;
+}
+.wpt_exercises_set .thumbnails {
+  float: left;
+  width: 40%;
+  height: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  text-align: left;
+}
+.wpt_exercises_set .thumbnails img {
+  height: 100%;
+}
+.wpt_exercises_set .excerpt {
+  text-align: right;
+  float: right;
+  width: 25%;
+  font-size: 0.9em;
+  display: block;
+  zoom: 1;
+}
+.wpt_exercises_set .excerpt:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_exercises_set .excerpt .wrapper {
+  display: table;
+  float: right;
+}
+.wpt_exercises_set .excerpt .spec {
+  display: table-cell;
+  padding: 0 15px;
+  text-align: center;
+  border-left: 1px solid #dedede;
+}
+.wpt_exercises_set .excerpt .spec:first-child {
+  border-left: none;
+}
+.wpt_exercises_set .excerpt .spec:last-child {
+  padding-right: 0;
+}
+.wpt_exercises_set .excerpt span {
+  font-size: 1.45em;
+  white-space: nowrap;
+}
+.wpt_exercises_set .excerpt label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.wpt_exercises_set.no_excerpt .main_info {
+  width: 50%;
+}
+.wpt_exercises_set.no_excerpt .thumbnails {
+  width: 50%;
+  padding-right: 0;
+  text-align: right;
+}
+.wpt_exercises_set.no_excerpt .excerpt {
+  display: none;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Workout Single (workouts.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workout_single .exercises_list .entry {
+  display: block;
+  zoom: 1;
+  padding: 25px 0;
+  border-bottom: 1px solid #dedede;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.wpt_workout_single .exercises_list .entry:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workout_single .exercises_list .entry:first-child {
+  border-top: 1px solid #dedede;
+}
+.wpt_workout_single .exercises_list .main_info {
+  float: left;
+  width: 30%;
+}
+.wpt_workout_single .exercises_list .main_info .count {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.wpt_workout_single .exercises_list .main_info .count a {
+  color: inherit;
+}
+.wpt_workout_single .exercises_list .main_info .title {
+  margin-top: 1px;
+  margin-bottom: 6px;
+  font-size: 1.15em;
+  line-height: 1.3;
+}
+.wpt_workout_single .exercises_list .main_info .title a {
+  color: inherit;
+}
+.wpt_workout_single .exercises_list .main_info .equipment {
+  font-size: 0.85em;
+}
+.wpt_workout_single .exercises_list .main_info .equipment label {
+  font-weight: 600;
+}
+.wpt_workout_single .exercises_list .main_info .more {
+  font-size: 0.85em;
+  font-weight: 600;
+}
+.wpt_workout_single .exercises_list .thumbnails {
+  float: left;
+  width: 40%;
+  height: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  text-align: center;
+}
+.wpt_workout_single .exercises_list .thumbnails img {
+  height: 100%;
+}
+.wpt_workout_single .exercises_list .details {
+  text-align: right;
+  float: right;
+  width: 30%;
+  display: block;
+  zoom: 1;
+}
+.wpt_workout_single .exercises_list .details:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workout_single .exercises_list .details .wrapper {
+  display: table;
+  float: right;
+}
+.wpt_workout_single .exercises_list .details .spec {
+  display: table-cell;
+  padding: 0 15px;
+  text-align: center;
+  border-left: 1px solid #dedede;
+}
+.wpt_workout_single .exercises_list .details .spec:first-child {
+  border-left: none;
+}
+.wpt_workout_single .exercises_list .details .spec:last-child {
+  padding-right: 0;
+}
+.wpt_workout_single .exercises_list .details span {
+  font-size: 1.45em;
+  white-space: nowrap;
+}
+.wpt_workout_single .exercises_list .details label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.wpt_workout_single .exercises_list .details .tooltip {
+  display: inline;
+  position: relative;
+  z-index: 0;
+}
+.wpt_workout_single .exercises_list .details .tooltip::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.wpt_workout_single .exercises_list .details .tooltip:hover::after {
+  pointer-events: auto;
+}
+.wpt_workout_single .exercises_list .details .tooltip .tooltip-content {
+  position: absolute;
+  z-index: 9999;
+  width: 300px;
+  right: -30px;
+  bottom: 100%;
+  font-size: 20px;
+  text-align: left;
+  color: #212121;
+  background: transparent;
+  opacity: 0;
+  margin: 0 0 10px -150px;
+  cursor: default;
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: all 0.3s 0.3s;
+  transition: all 0.3s 0.3s;
+}
+.wpt_workout_single .exercises_list .details .tooltip .tooltip-content * {
+  white-space: normal;
+  font-size: 12px;
+  line-height: 1.2 !important;
+}
+.wpt_workout_single .exercises_list .details .tooltip:hover .tooltip-content {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.wpt_workout_single .exercises_list .details .tooltip .tooltip-content span {
+  display: block;
+}
+.wpt_workout_single .exercises_list .details .tooltip .tooltip-text {
+  border-bottom: 4px solid #616161;
+  overflow: hidden;
+  -webkit-transform: scale3d(0, 1, 1);
+  -ms-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+  -webkit-transition: transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
+  transform-origin: right;
+  -webkit-transform-origin: right;
+}
+.wpt_workout_single .exercises_list .details .tooltip:hover .tooltip-text {
+  -webkit-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.wpt_workout_single .exercises_list .details .tooltip .tooltip-inner {
+  border: 1px solid #eee;
+  padding: 20px 20px;
+  background-color: #FFF;
+  background-color: rgba(255, 255, 255, 0.92);
+  -webkit-transform: translate3d(0, 100%, 0);
+  -ms-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+.wpt_workout_single .exercises_list .details .tooltip:hover .tooltip-inner {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.wpt_workout_single .exercises_list .details .tooltip .tooltip-content::after {
+  content: '';
+  bottom: -15px;
+  right: 30px;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: #616161;
+  border-width: 8px;
+  margin-left: -8px;
+}
+.wpt_workout_single .exercises_list .details .tooltip .tooltip-content::after {
+  border-top-color: #222;
+}
+.wpt_workout_single .exercises_list .details .tooltip .tooltip-text {
+  border-bottom-color: #222;
+}
+.wpt_workout_single .exercises_list .details .tooltip .info_icon {
+  color: #545454;
+}
+.wpt_workout_single .workout_actions {
+  padding: 15px 0;
+  text-align: center;
+}
+.wpt_workout_single .workout_actions > div {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 5px;
+}
+.wpt_workout_single .workout_actions .sharer .sc85_post_sharing_links {
+  display: inline;
+}
+.wpt_workout_single .workout_actions .sharer > * {
+  vertical-align: middle;
+}
+.wpt_workout_single .workout_actions .sharer a {
+  font-size: 1.3em;
+  margin: 0 2px;
+}
+.wpt_workout_single .workout_grader {
+  display: inline-block;
+  margin: 0 auto;
+  width: 66px;
+  height: 11px;
+  background: url('images/rating-stars.png') left top;
+  position: relative;
+  zoom: 1;
+}
+.wpt_workout_single .workout_grader a {
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 13px;
+  overflow: hidden;
+  display: block;
+  height: 0;
+  padding-top: 11px;
+}
+.wpt_workout_single .workout_grader a:hover,
+.wpt_workout_single .workout_grader a:focus,
+.wpt_workout_single .workout_grader a.active {
+  background: url('images/rating-stars.png') left bottom;
+}
+.wpt_workout_single .workout_grader .star-1 {
+  width: 13px;
+  z-index: 10;
+}
+.wpt_workout_single .workout_grader .star-2 {
+  width: 26px;
+  z-index: 9;
+}
+.wpt_workout_single .workout_grader .star-3 {
+  width: 39px;
+  z-index: 8;
+}
+.wpt_workout_single .workout_grader .star-4 {
+  width: 52px;
+  z-index: 7;
+}
+.wpt_workout_single .workout_grader .star-5 {
+  width: 65px;
+  z-index: 6;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .wpt_workout_single .workout_grader {
+    background-image: url('images/rating-stars@2x.png');
+    background-size: 66px 22px;
+  }
+  .wpt_workout_single .workout_grader a:hover,
+  .wpt_workout_single .workout_grader a:focus,
+  .wpt_workout_single .workout_grader a.active {
+    background-image: url('images/rating-stars@2x.png');
+    background-size: 66px 22px;
+  }
+}
+.wpt_workout_single .workout_grader.success,
+.wpt_workout_single .workout_grader.error,
+.wpt_workout_single .workout_grader.loading {
+  margin-right: 20px;
+}
+.wpt_workout_single .workout_grader:after {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  line-height: 1;
+}
+.wpt_workout_single .workout_grader.loading:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f021';
+  -webkit-animation: fa-spin 1.5s infinite linear;
+  animation: fa-spin 1.5s infinite linear;
+}
+.wpt_workout_single .workout_grader.success:after {
+  color: #009718;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f00c';
+}
+.wpt_workout_single .workout_grader.error:after {
+  color: #C50000;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f00d';
+}
+.wpt_workout_single .related_workouts .wpt_heading {
+  margin-bottom: 30px;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery {
+  display: block;
+  zoom: 1;
+  margin: 0 -15px;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery .entry {
+  float: left;
+  padding: 0 15px;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery.items_2 .entry {
+  width: 50%;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery.items_3 .entry {
+  width: 33.3%;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery.items_4 .entry {
+  width: 25%;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery .entry .thumbnail {
+  margin-bottom: 15px;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery .entry .details .head_area .title {
+  margin-bottom: 3px;
+}
+.wpt_workout_single .related_workouts .related_workouts_gallery .entry .details .body_area .excerpt {
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Workout Archive (workouts.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workout_archive .workout_filters {
+  background: #f9f9f9;
+  border: solid 1px #e3e3e3;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.wpt_workout_archive .workout_filters .wrap {
+  display: inline-block;
+  margin: 0 15px;
+}
+.wpt_workout_archive .workout_filters .label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.wpt_workout_archive .workout_filters select {
+  width: 180px;
+  vertical-align: middle;
+}
+.wpt_workout_archive .workout_filters .label,
+.wpt_workout_archive .workout_filters select {
+  margin-bottom: 10px;
+}
+.wpt_workout_archive .workout_filters .clear_filters {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: absolute;
+  margin-top: 7px;
+}
+.wpt_workout_archive .workout_filters .clear_filters:before {
+  content: 'x';
+}
+.wpt_workout_archive .workout_filters:hover .clear_filters {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_workout_archive .workout_list {
+  display: block;
+  zoom: 1;
+  margin: 0 -20px;
+  margin-bottom: -40px;
+}
+.wpt_workout_archive .workout_list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workout_archive .workout_list .entry .wrapper {
+  background: #FFF;
+  text-align: center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_workout_archive .workout_list .entry .wrapper .thumbnail,
+.wpt_workout_archive .workout_list .entry .wrapper .thumbnail img {
+  -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+.wpt_workout_archive .workout_list .entry .wrapper .details {
+  border: 1px solid #ebeaea;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 0;
+  padding: 25px 20px;
+}
+.wpt_workout_archive .workout_list .entry .wrapper .details .heading {
+  margin-bottom: 12px;
+}
+.wpt_workout_archive .workout_list .entry .wrapper .details .heading .title {
+  font-size: 1.1em;
+  margin: 0 0 2px;
+}
+.wpt_workout_archive .workout_list .entry .wrapper .details .description {
+  margin-top: 12px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+.wpt_workout_archive .workout_list .entry .wrapper .details .footer {
+  margin-top: 12px;
+}
+.wpt_workout_archive .workout_list .entry .wrapper .details .footer .categories {
+  margin-bottom: 15px;
+  font-size: 0.85em;
+}
+.wpt_workout_archive .workout_list .entry .wrapper .details .footer .categories span {
+  padding: 0 5px;
+}
+.wpt_workout_archive .workout_list .entry.no_thumbnail .details {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_workout_archive .workout_list .entry {
+  width: 33.3%;
+  float: left;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+.wpt_workout_archive .workout_list.w_2cols .entry {
+  width: 50%;
+}
+.wpt_workout_archive .workout_list.w_3cols .entry {
+  width: 33.3%;
+}
+.wpt_workout_archive .workout_list.w_4cols .entry {
+  width: 25%;
+}
+.wpt_workout_archive .pagination {
+  margin-top: 35px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Workouts Teasers Shortcode (workouts.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workouts_teasers_shortcode .details {
+  padding-top: 14px;
+}
+.wpt_workouts_teasers_shortcode .title {
+  margin: 0;
+}
+.wpt_workouts_teasers_shortcode .excerpt {
+  margin-top: 7px;
+}
+.wpt_workouts_teasers_shortcode .sc85_rating_stars_shortcode {
+  margin-top: 7px;
+}
+.wpt_workouts_teasers_shortcode .more {
+  display: inline-block;
+  margin-top: 7px;
+}
+.wpt_workouts_teasers_shortcode .button {
+  margin-top: 10px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Testimonial Archive (testimonials.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_testimonial_archive .testimonial_list {
+  margin: 0 -2%;
+  margin-bottom: -4%;
+  display: block;
+  zoom: 1;
+}
+.wpt_testimonial_archive .testimonial_list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_testimonial_archive .testimonial_list .entry {
+  width: 33.3%;
+  float: left;
+  padding: 0 2%;
+  margin-bottom: 4%;
+}
+.wpt_testimonial_archive .testimonial_list.w_2cols .entry {
+  width: 50%;
+}
+.wpt_testimonial_archive .testimonial_list.w_3cols .entry {
+  width: 33.3%;
+}
+.wpt_testimonial_archive .testimonial_list.w_4cols .entry {
+  width: 25%;
+}
+.wpt_testimonial_archive .testimonial_list .entry .wrapper {
+  border: 1px solid #eee;
+  text-align: center;
+  padding: 20px;
+}
+.wpt_testimonial_archive .testimonial_list .entry .wrapper .thumbnail {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  border-radius: 65px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 3px solid #dddddd;
+}
+.wpt_testimonial_archive .testimonial_list .entry .wrapper .thumbnail img {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  border-radius: 65px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_testimonial_archive .testimonial_list .entry .wrapper .date {
+  margin-top: 15px;
+}
+.wpt_testimonial_archive .pagination {
+  clear: both;
+  margin-top: 35px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Testimonial Carousel Shortcode (testimonials.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_testimonial_carousel {
+  text-align: center;
+  padding: 0 50px;
+}
+.wpt_testimonial_carousel .entry {
+  width: 100%;
+}
+.wpt_testimonial_carousel .text {
+  margin-bottom: 15px;
+}
+.wpt_testimonial_carousel .author {
+  font-weight: bold;
+}
+.wpt_testimonial_carousel .date {
+  font-size: 0.86em;
+}
+.wpt_testimonial_carousel .flickity-prev-next-button {
+  z-index: 6;
+  background: transparent;
+  -webkit-opacity: 0.1;
+  -moz-opacity: 0.1;
+  opacity: 0.1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.wpt_testimonial_carousel .flickity-prev-next-button svg {
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+}
+.wpt_testimonial_carousel .flickity-prev-next-button:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.wpt_testimonial_carousel:hover .flickity-prev-next-button {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_testimonial_carousel .thumbnail {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  border-radius: 65px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 3px solid #dddddd;
+}
+.wpt_testimonial_carousel .thumbnail img {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  border-radius: 65px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Trainer Archive (trainers.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_trainer_archive .trainer_list {
+  margin: 0 -2%;
+  margin-bottom: -4%;
+  display: block;
+  zoom: 1;
+}
+.wpt_trainer_archive .trainer_list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_trainer_archive .trainer_list .entry {
+  width: 33.3%;
+  float: left;
+  padding: 0 2%;
+  margin-bottom: 4%;
+}
+.wpt_trainer_archive .trainer_list.w_2cols .entry {
+  width: 50%;
+}
+.wpt_trainer_archive .trainer_list.w_3cols .entry {
+  width: 33.3%;
+}
+.wpt_trainer_archive .trainer_list.w_4cols .entry {
+  width: 25%;
+}
+.wpt_trainer_archive .trainer_list .entry a,
+.wpt_trainer_archive .trainer_list .entry img {
+  display: block;
+}
+.wpt_trainer_archive .trainer_list .entry .caption > * {
+  display: block;
+}
+.wpt_trainer_archive .pagination {
+  clear: both;
+  margin-top: 35px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Trainer Single (trainers.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_trainer_single .wpt_trainer_list_shortcode .entry {
+  border: none !important;
+  padding-top: 0 !important;
+  padding-bottom: 0;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Trainer List Shortcode (trainers.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_trainer_list_shortcode .entry {
+  display: block;
+  zoom: 1;
+}
+.wpt_trainer_list_shortcode .entry:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_trainer_list_shortcode .entry .thumbnail {
+  float: left;
+  width: 29%;
+}
+.wpt_trainer_list_shortcode .entry .info {
+  float: right;
+  width: 71%;
+}
+.wpt_trainer_list_shortcode .entry:nth-child(odd) .thumbnail {
+  float: left;
+}
+.wpt_trainer_list_shortcode .entry:nth-child(odd) .info {
+  float: right;
+  padding-left: 4%;
+}
+.wpt_trainer_list_shortcode .entry:nth-child(even) .thumbnail {
+  float: right;
+}
+.wpt_trainer_list_shortcode .entry:nth-child(even) .info {
+  float: left;
+  padding-right: 4%;
+}
+.wpt_trainer_list_shortcode .entry {
+  border-bottom: solid 1px #ccc;
+  padding: 30px 0;
+}
+.wpt_trainer_list_shortcode .entry:first-child {
+  padding-top: 0;
+}
+.wpt_trainer_list_shortcode .entry .info > * {
+  margin-bottom: 20px;
+}
+.wpt_trainer_list_shortcode .entry .info > *:last-child {
+  margin-bottom: 0px;
+}
+.wpt_trainer_list_shortcode .entry .title > * {
+  margin-bottom: 5px;
+}
+.wpt_trainer_list_shortcode .entry .metadata > p {
+  margin-bottom: 5px;
+}
+.wpt_trainer_list_shortcode.single_item .entry {
+  padding-top: 30px;
+  border-top: solid 1px #ccc;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Trainer Grid Shortcode (trainers.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_trainer_grid_shortcode {
+  margin: 0 -2%;
+  display: block;
+  zoom: 1;
+}
+.wpt_trainer_grid_shortcode:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_trainer_grid_shortcode .entry {
+  width: 33.3%;
+  float: left;
+  padding: 0 2%;
+  margin-bottom: 0;
+}
+.wpt_trainer_grid_shortcode.w_2cols .entry {
+  width: 50%;
+}
+.wpt_trainer_grid_shortcode.w_3cols .entry {
+  width: 33.3%;
+}
+.wpt_trainer_grid_shortcode.w_4cols .entry {
+  width: 25%;
+}
+.wpt_trainer_grid_shortcode .entry a,
+.wpt_trainer_grid_shortcode .entry img {
+  display: block;
+}
+.wpt_trainer_grid_shortcode .entry .caption > * {
+  display: block;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Trainer Prices Shortcode (trainers.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_trainer_prices_shortcode .head {
+  margin-bottom: 15px;
+}
+.wpt_trainer_prices_shortcode .title {
+  margin-bottom: 4px;
+}
+.wpt_trainer_prices_shortcode .subtitle {
+  margin-top: 0;
+}
+.wpt_trainer_prices_shortcode > * {
+  margin-bottom: 15px;
+}
+.wpt_trainer_prices_shortcode > *:last-child {
+  margin-bottom: 0;
+}
+.wpt_trainer_prices_shortcode .price_list .entry {
+  display: table;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.wpt_trainer_prices_shortcode .price_list .entry .description,
+.wpt_trainer_prices_shortcode .price_list .entry .price {
+  display: table-cell;
+}
+.wpt_trainer_prices_shortcode .price_list .entry .price {
+  text-align: right;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Trainer Prices Shortcode (trainers.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_trainer_classes_shortcode .head {
+  margin-bottom: 15px;
+}
+.wpt_trainer_classes_shortcode .title {
+  margin-bottom: 4px;
+}
+.wpt_trainer_classes_shortcode .subtitle {
+  margin-top: 0;
+}
+.wpt_trainer_classes_shortcode > * {
+  margin-bottom: 15px;
+}
+.wpt_trainer_classes_shortcode > *:last-child {
+  margin-bottom: 0;
+}
+.wpt_trainer_classes_shortcode .classes .entry {
+  display: table;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.wpt_trainer_classes_shortcode .classes .entry .description,
+.wpt_trainer_classes_shortcode .classes .entry .price {
+  display: table-cell;
+}
+.wpt_trainer_classes_shortcode .classes .entry .price {
+  text-align: right;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Class Single (classes.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_class_single .class_specs {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: solid 1px #ccc;
+}
+.wpt_class_single .class_specs > .wrapper {
+  margin: 0 -40px;
+  margin-bottom: -20px;
+  display: block;
+  zoom: 1;
+}
+.wpt_class_single .class_specs > .wrapper:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_class_single .class_specs .group {
+  float: left;
+  width: 33.3%;
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+.wpt_class_single .class_details_list p {
+  margin-bottom: 5px;
+}
+.wpt_class_single .class_details_list label {
+  font-weight: bold;
+}
+.wpt_class_single .class_schedule .entry {
+  display: block;
+  zoom: 1;
+  margin-bottom: 5px;
+}
+.wpt_class_single .class_schedule .entry:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_class_single .class_schedule .entry .description {
+  float: left;
+}
+.wpt_class_single .class_schedule .entry .description p {
+  margin-bottom: 0;
+}
+.wpt_class_single .class_schedule .entry .description p:empty {
+  display: none;
+}
+.wpt_class_single .class_schedule .entry .time {
+  float: right;
+}
+.wpt_class_single .class_trainers .entry {
+  display: block;
+  zoom: 1;
+  margin-bottom: 7px;
+}
+.wpt_class_single .class_trainers .entry:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_class_single .class_trainers .entry .photo {
+  float: left;
+  width: 13%;
+}
+.wpt_class_single .class_trainers .entry .info {
+  float: left;
+  width: 87%;
+  padding-left: 10px;
+}
+.wpt_class_single .class_trainers .entry p {
+  margin-bottom: 0px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Class Archive (classes.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_class_archive .class_filters {
+  background: #f9f9f9;
+  border: solid 1px #e3e3e3;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.wpt_class_archive .class_filters .wrap {
+  display: inline-block;
+  margin: 0 15px;
+}
+.wpt_class_archive .class_filters .label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.wpt_class_archive .class_filters select {
+  width: 180px;
+  vertical-align: middle;
+}
+.wpt_class_archive .class_filters .label,
+.wpt_class_archive .class_filters select {
+  margin-bottom: 10px;
+}
+.wpt_class_archive .class_filters .clear_filters {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: absolute;
+  margin-top: 7px;
+}
+.wpt_class_archive .class_filters .clear_filters:before {
+  content: 'x';
+}
+.wpt_class_archive .class_filters:hover .clear_filters {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_class_archive .class_list {
+  display: block;
+  zoom: 1;
+  margin: 0 -20px;
+  margin-bottom: -40px;
+}
+.wpt_class_archive .class_list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_class_archive .class_list .entry .wrapper {
+  background: #FFF;
+  text-align: center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_class_archive .class_list .entry .wrapper .thumbnail,
+.wpt_class_archive .class_list .entry .wrapper .thumbnail img {
+  -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+.wpt_class_archive .class_list .entry .wrapper .details {
+  border: 1px solid #ebeaea;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 0;
+  padding: 25px 20px;
+}
+.wpt_class_archive .class_list .entry .wrapper .details .heading {
+  margin-bottom: 12px;
+}
+.wpt_class_archive .class_list .entry .wrapper .details .heading .title {
+  font-size: 1.1em;
+  margin: 0 0 2px;
+}
+.wpt_class_archive .class_list .entry .wrapper .details .description {
+  margin-top: 12px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+.wpt_class_archive .class_list .entry .wrapper .details .footer {
+  margin-top: 12px;
+}
+.wpt_class_archive .class_list .entry .wrapper .details .footer .categories {
+  margin-bottom: 15px;
+  font-size: 0.85em;
+}
+.wpt_class_archive .class_list .entry .wrapper .details .footer .categories span {
+  padding: 0 5px;
+}
+.wpt_class_archive .class_list .entry.no_thumbnail .details {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_class_archive .class_list .entry {
+  width: 33.3%;
+  float: left;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+.wpt_class_archive .class_list.w_2cols .entry {
+  width: 50%;
+}
+.wpt_class_archive .class_list.w_3cols .entry {
+  width: 33.3%;
+}
+.wpt_class_archive .class_list.w_4cols .entry {
+  width: 25%;
+}
+.wpt_class_archive .pagination {
+  margin-top: 35px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Classes Weekly Schedule (classes.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_weekly_classes_schedule .weekdays,
+.wpt_weekly_classes_schedule .weekdays_short {
+  text-align: center;
+}
+.wpt_weekly_classes_schedule .weekdays li,
+.wpt_weekly_classes_schedule .weekdays_short li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes {
+  display: block;
+  zoom: 1;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-left: 3px;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes .class_entry {
+  width: 25%;
+  float: left;
+  padding: 20px;
+  border: 1px solid #eee;
+  text-align: center;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.w_1cols {
+  width: 25%;
+  padding-left: 0;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.w_1cols .class_entry {
+  width: 100%;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.w_2cols {
+  width: 50%;
+  padding-left: 1px;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.w_2cols .class_entry {
+  width: 50%;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.w_3cols {
+  width: 66.666666%;
+  padding-left: 2px;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.w_3cols .class_entry {
+  width: 33.3%;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes .class_entry {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.active .class_entry {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.not_ready {
+  display: none;
+}
+.wpt_weekly_classes_schedule .classes .daily_classes.not_ready.active {
+  display: block;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Classes Teasers Shortcode (classes.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_classes_teasers_shortcode .details {
+  padding-top: 14px;
+}
+.wpt_classes_teasers_shortcode .title {
+  margin: 0;
+}
+.wpt_classes_teasers_shortcode .excerpt {
+  margin-top: 7px;
+}
+.wpt_classes_teasers_shortcode .sc85_rating_stars_shortcode {
+  margin-top: 7px;
+}
+.wpt_classes_teasers_shortcode .more {
+  display: inline-block;
+  margin-top: 7px;
+}
+.wpt_classes_teasers_shortcode .button {
+  margin-top: 10px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Nutrition Tip Archive (nutritiontips.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_nutritiontip_archive .entry {
+  margin-bottom: 40px;
+  display: block;
+  zoom: 1;
+}
+.wpt_nutritiontip_archive .entry:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_nutritiontip_archive .entry .thumbnail {
+  float: left;
+  width: 30%;
+}
+.wpt_nutritiontip_archive .entry .details {
+  float: left;
+  width: 70%;
+  padding-left: 4%;
+}
+.wpt_nutritiontip_archive .entry .post_head {
+  margin-bottom: 15px;
+}
+.wpt_nutritiontip_archive .entry .post_head .title {
+  margin-bottom: 3px;
+}
+.wpt_nutritiontip_archive .entry .post_foot {
+  margin-top: 15px;
+}
+.wpt_nutritiontip_archive .pagination {
+  margin-top: 40px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Nutrition Tip Single (nutritiontips.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_nutritiontip_single .thumbnail,
+.wpt_nutritiontip_single .content,
+.wpt_nutritiontip_single .author_info,
+.wpt_nutritiontip_single .meta {
+  margin-bottom: 25px;
+}
+.wpt_nutritiontip_single .meta {
+  margin-bottom: 30px;
+}
+.wpt_nutritiontip_single .winner_post_comments {
+  margin-top: 35px;
+}
+.wpt_nutritiontip_single .post_body * {
+  max-width: 100%;
+}
+.wpt_nutritiontip_single .thumbnail img {
+  display: block;
+  margin: 0 auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_nutritiontip_single .author_info {
+  display: block;
+  zoom: 1;
+}
+.wpt_nutritiontip_single .author_info:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_nutritiontip_single .author_info .avatar {
+  float: left;
+  width: 70px;
+  margin-right: 20px;
+}
+.wpt_nutritiontip_single .author_info .avatar img {
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  border-radius: 70px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_nutritiontip_single .author_info .details {
+  padding-left: 90px;
+}
+.wpt_nutritiontip_single .author_info .details cite {
+  font-size: 0.9em;
+  line-height: 1;
+  font-style: normal;
+  font-weight: normal;
+}
+.wpt_nutritiontip_single .author_info .details .name {
+  margin-bottom: 10px;
+  font-size: 1.15em;
+  line-height: 1.2;
+}
+.wpt_nutritiontip_single .author_info .details .bio {
+  margin-bottom: 10px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Recent/Related Nutrition Tips Widget (nutritiontips.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_recent_nutritiontips_widget li,
+.wpt_related_nutritiontips_widget li {
+  display: block;
+  zoom: 1;
+  margin-bottom: 5px;
+}
+.wpt_recent_nutritiontips_widget li:after,
+.wpt_related_nutritiontips_widget li:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_recent_nutritiontips_widget li .thumbnail,
+.wpt_related_nutritiontips_widget li .thumbnail {
+  display: block;
+  float: left;
+  width: 15%;
+}
+.wpt_recent_nutritiontips_widget li .details,
+.wpt_related_nutritiontips_widget li .details {
+  display: block;
+  float: left;
+  width: 85%;
+  padding-left: 13px;
+}
+.wpt_recent_nutritiontips_widget li .category,
+.wpt_related_nutritiontips_widget li .category {
+  display: block;
+}
+.wpt_recent_nutritiontips_widget li.no_thumbnail .details,
+.wpt_related_nutritiontips_widget li.no_thumbnail .details {
+  padding-left: 0;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ NutritionTips Teasers Shortcode (nutritiontips.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_nutritiontips_teasers_shortcode .details {
+  padding-top: 14px;
+}
+.wpt_nutritiontips_teasers_shortcode .title {
+  margin: 0;
+}
+.wpt_nutritiontips_teasers_shortcode .excerpt {
+  margin-top: 7px;
+}
+.wpt_nutritiontips_teasers_shortcode .sc85_rating_stars_shortcode {
+  margin-top: 7px;
+}
+.wpt_nutritiontips_teasers_shortcode .more {
+  display: inline-block;
+  margin-top: 7px;
+}
+.wpt_nutritiontips_teasers_shortcode .button {
+  margin-top: 10px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Unit Switcher (calculators.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_unit_switcher {
+  display: block;
+  zoom: 1;
+  margin: 0 -5px;
+}
+.wpt_unit_switcher:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_unit_switcher > span {
+  float: left;
+  padding: 0 5px;
+  line-height: 14px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.wpt_unit_switcher .toggler {
+  display: inline-block;
+  width: 27px;
+  height: 14px;
+  background: #383838;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 2px;
+  display: block;
+  zoom: 1;
+}
+.wpt_unit_switcher .toggler:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_unit_switcher .toggler .metric,
+.wpt_unit_switcher .toggler .imperial {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #FFF;
+  display: block;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.wpt_unit_switcher .toggler .metric {
+  float: left;
+}
+.wpt_unit_switcher .toggler .imperial {
+  float: right;
+}
+.wpt_unit_switcher.metric .toggler .metric {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_unit_switcher.metric .toggler .imperial {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.wpt_unit_switcher.imperial .toggler .imperial {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_unit_switcher.imperial .toggler .metric {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Fitness Calculator (calculators.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_fitness_calculator {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_fitness_calculator .wrapper {
+  display: table;
+  width: 100%;
+}
+.wpt_fitness_calculator .wrapper .values_section {
+  display: table-cell;
+  width: 65%;
+  padding: 25px;
+  background: #f9f9f9;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.wpt_fitness_calculator .wrapper .results_section {
+  display: table-cell;
+  width: 45%;
+  padding: 25px;
+  background: #f1f1f1;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.wpt_fitness_calculator form .column_row {
+  display: block;
+  zoom: 1;
+  margin: 0 -5px;
+}
+.wpt_fitness_calculator form .column_row:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_fitness_calculator form .column_row .field {
+  float: left;
+  width: 50%;
+  padding: 0 5px;
+}
+.wpt_fitness_calculator form .column_row .field {
+  margin-bottom: 10px;
+}
+.wpt_fitness_calculator form .row .field {
+  margin-bottom: 10px;
+}
+.wpt_fitness_calculator form .actions {
+  display: block;
+  zoom: 1;
+}
+.wpt_fitness_calculator form .actions:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_fitness_calculator form .actions .wpt_unit_switcher {
+  float: right;
+  padding-top: 6px;
+}
+.wpt_fitness_calculator form select,
+.wpt_fitness_calculator form input[type="text"] {
+  width: 100%;
+}
+.wpt_fitness_calculator .results_section .title {
+  margin-bottom: 5px;
+}
+.wpt_fitness_calculator .results_section .result {
+  font-size: 4em;
+  margin: 5px 0;
+}
+.wpt_fitness_calculator .results_section .footnote {
+  font-size: 0.8em;
+}
+.wpt_fitness_calculator .results_section .more {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 0.9em;
+  visibility: hidden;
+}
+.wpt_fitness_calculator .results_section .more > * {
+  margin: 0 2px;
+  white-space: nowrap;
+}
+.wpt_fitness_calculator .sharing_popup_template {
+  display: none;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Fitness Calculator Popup
+== ------------------------------------------------------------------- ==
+*/
+.wpt_fitness_calculator_popup {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: table;
+  visibility: hidden;
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.wpt_fitness_calculator_popup .wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.wpt_fitness_calculator_popup.visible {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_fitness_calculator_popup .popup_content {
+  background: #FFF;
+  display: inline-block;
+  padding: 25px 35px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_fitness_calculator_popup.sharing .popup_content {
+  background: #FFF;
+  display: inline-block;
+  padding: 25px 35px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_fitness_calculator_popup.sharing .popup_content .intro:before {
+  content: '';
+  width: 87px;
+  height: 75px;
+  display: inline-block;
+  background: url('images/envelope.png') no-repeat center center;
+  margin-bottom: 10px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .wpt_fitness_calculator_popup.sharing .popup_content .intro:before {
+    background-image: url('images/envelope@2x.png');
+    background-size: 87px 75px;
+  }
+}
+.wpt_fitness_calculator_popup.sharing .popup_content .intro p {
+  margin: 0;
+}
+.wpt_fitness_calculator_popup.sharing .popup_content .fields {
+  margin: 15px 0;
+}
+.wpt_fitness_calculator_popup.sharing .popup_content cite {
+  display: block;
+  font-size: 0.85em;
+  font-style: normal;
+}
+.wpt_fitness_calculator_popup.sharing .popup_content .feedback {
+  margin-left: 5px;
+  margin-right: -15px;
+  opacity: 0;
+}
+.wpt_fitness_calculator_popup.sharing .popup_content .feedback.loading {
+  opacity: 1;
+}
+.wpt_fitness_calculator_popup.sharing .popup_content .feedback.success {
+  opacity: 1;
+  color: #008000;
+}
+.wpt_fitness_calculator_popup.sharing .popup_content .feedback.error {
+  opacity: 1;
+  color: #c50000;
+}
+.wpt_fitness_calculator_popup.info .popup_content {
+  padding: 20px 25px;
+  min-width: 320px;
+}
+.wpt_fitness_calculator_popup.info .popup_content .heading .title {
+  line-height: 1.2;
+}
+.wpt_fitness_calculator_popup.info .popup_content .heading .value {
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 1;
+}
+.wpt_fitness_calculator_popup.info table {
+  border: none;
+  width: 100%;
+  font-size: 0.95em;
+  border-bottom: 1px solid #eee;
+}
+.wpt_fitness_calculator_popup.info table tr {
+  background: none;
+  border-top: 1px solid #eee;
+}
+.wpt_fitness_calculator_popup.info table td {
+  text-align: left;
+  border: none;
+  padding: 5px 0;
+}
+.wpt_fitness_calculator_popup.info table td:last-child {
+  text-align: right;
+}
+.wpt_overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wpt_overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ WorkoutPlan Single (workoutsplans.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workoutplan_workout_single .workout_tips {
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+.wpt_workoutplan_workout_single .workout_tips .wpt_heading {
+  margin-bottom: 25px;
+  font-size: 0.9em;
+}
+.wpt_workoutplan_workout_single .workout_tips ul {
+  display: block;
+  zoom: 1;
+  margin: 0 -25px;
+  margin-bottom: 20px;
+}
+.wpt_workoutplan_workout_single .workout_tips ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workoutplan_workout_single .workout_tips ul li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 45px;
+  padding-right: 25px;
+  width: 50%;
+  float: left;
+}
+.wpt_workoutplan_workout_single .workout_tips ul li:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f1cd';
+  position: absolute;
+  left: 25px;
+  top: 1px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ WorkoutPlan Navigation (workoutplans.less)
+== ------------------------------------------------------------------- ==
+*/
+.workoutplan_navigation {
+  background: #f9f9f9;
+  border: solid 1px #e3e3e3;
+  margin-bottom: 44px;
+  padding: 18px 0 20px;
+  text-align: center;
+  display: block;
+  zoom: 1;
+}
+.workoutplan_navigation:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.workoutplan_navigation .hotlinks {
+  float: left;
+}
+.workoutplan_navigation .hotlinks li {
+  display: inline-block;
+}
+.workoutplan_navigation .hotlinks li.current {
+  font-weight: bold;
+}
+.workoutplan_navigation .quick_nav {
+  float: right;
+}
+.footnote .workoutplan_navigation {
+  clear: both;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Workout Archive (workouts.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workoutplan_archive .workoutplan_filters {
+  background: #f9f9f9;
+  border: solid 1px #e3e3e3;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.wpt_workoutplan_archive .workoutplan_filters .wrap {
+  display: inline-block;
+  margin: 0 15px;
+}
+.wpt_workoutplan_archive .workoutplan_filters .label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.wpt_workoutplan_archive .workoutplan_filters select {
+  width: 180px;
+  vertical-align: middle;
+}
+.wpt_workoutplan_archive .workoutplan_filters .label,
+.wpt_workoutplan_archive .workoutplan_filters select {
+  margin-bottom: 10px;
+}
+.wpt_workoutplan_archive .workoutplan_filters .clear_filters {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: absolute;
+  margin-top: 7px;
+}
+.wpt_workoutplan_archive .workoutplan_filters .clear_filters:before {
+  content: 'x';
+}
+.wpt_workoutplan_archive .workoutplan_filters:hover .clear_filters {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.wpt_workoutplan_archive .workoutplan_list {
+  display: block;
+  zoom: 1;
+  margin: 0 -20px;
+  margin-bottom: -40px;
+}
+.wpt_workoutplan_archive .workoutplan_list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper {
+  background: #FFF;
+  text-align: center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .thumbnail,
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .thumbnail img {
+  -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .details {
+  border: 1px solid #ebeaea;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 0;
+  padding: 25px 20px;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .details .heading {
+  margin-bottom: 12px;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .details .heading .title {
+  font-size: 1.1em;
+  margin: 0 0 2px;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .details .description {
+  margin-top: 12px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .details .footer {
+  margin-top: 12px;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .details .footer .categories {
+  margin-bottom: 15px;
+  font-size: 0.85em;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry .wrapper .details .footer .categories span {
+  padding: 0 5px;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry.no_thumbnail .details {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_workoutplan_archive .workoutplan_list .entry {
+  width: 33.333333%;
+  float: left;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+.wpt_workoutplan_archive .workoutplan_list.w_2cols .entry {
+  width: 50%;
+}
+.wpt_workoutplan_archive .workoutplan_list.w_3cols .entry {
+  width: 33.333333%;
+}
+.wpt_workoutplan_archive .workoutplan_list.w_4cols .entry {
+  width: 25%;
+}
+.wpt_workoutplan_archive .pagination {
+  margin-top: 35px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ WorkoutPlan Schedule Shortcode (workoutplans.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workoutplan_schedule {
+  display: block;
+  zoom: 1;
+}
+.wpt_workoutplan_schedule:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workoutplan_schedule .week {
+  display: block;
+  zoom: 1;
+}
+.wpt_workoutplan_schedule .week:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workoutplan_schedule .week_title {
+  background: #000;
+  color: #FFF;
+  clear: both;
+  text-align: center;
+  padding: 6px;
+}
+.wpt_workoutplan_schedule .week_entries .entry:first-child {
+  border-left: 1px solid #eee;
+}
+.wpt_workoutplan_schedule .entry {
+  float: left;
+  text-align: center;
+  width: 14.28%;
+  border-right: 1px solid #eee;
+}
+.wpt_workoutplan_schedule .entry a {
+  display: block;
+  height: 100%;
+  padding: 20px 10px;
+}
+.wpt_workoutplan_schedule.workoutsperweek_1 .entry {
+  width: 100%;
+}
+.wpt_workoutplan_schedule.workoutsperweek_2 .entry {
+  width: 50%;
+}
+.wpt_workoutplan_schedule.workoutsperweek_3 .entry {
+  width: 33.33%;
+}
+.wpt_workoutplan_schedule.workoutsperweek_4 .entry {
+  width: 25%;
+}
+.wpt_workoutplan_schedule.workoutsperweek_5 .entry {
+  width: 20%;
+}
+.wpt_workoutplan_schedule.workoutsperweek_6 .entry {
+  width: 16.66%;
+}
+.wpt_workoutplan_schedule .day {
+  background: #000;
+  color: #FFF;
+  display: inline-block;
+  padding: 1px 10px 2px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.wpt_workoutplan_schedule .image {
+  width: 50%;
+  margin: 0 auto;
+}
+.print_schedule {
+  margin-top: -10px;
+  text-align: center;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ WorkoutPlan Subscription Steps (workoutplans.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workoutplan_subscription_steps {
+  display: block;
+  zoom: 1;
+  position: relative;
+  margin-bottom: 60px;
+  counter-reset: step;
+}
+.wpt_workoutplan_subscription_steps:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workoutplan_subscription_steps:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #e6e6e6;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+.wpt_workoutplan_subscription_steps .step {
+  display: block;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  line-height: 1;
+  position: relative;
+}
+.wpt_workoutplan_subscription_steps .step.current:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #2b2b2b;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+.wpt_workoutplan_subscription_steps .number {
+  display: inline;
+}
+.wpt_workoutplan_subscription_steps .title {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wpt_workoutplan_subscription_steps .step {
+  counter-increment: step;
+}
+.wpt_workoutplan_subscription_steps .step .number span:after {
+  content: counter(step);
+}
+.wpt_workoutplan_subscription_steps .step.done .number span:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f00c';
+  font-size: 10px;
+}
+.wpt_workoutplan_subscription_steps .number {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+  font-size: 11px;
+  font-family: Courier;
+  vertical-align: middle;
+  background: #2c2c2c;
+  color: #FFF;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-right: 3px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ WorkoutPlan Purchase Page (workoutplans.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workoutplan_purchase .account_step {
+  display: block;
+  zoom: 1;
+}
+.wpt_workoutplan_purchase .account_step:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workoutplan_purchase .account_step > .login {
+  float: left;
+  width: 48%;
+}
+.wpt_workoutplan_purchase .account_step > .register {
+  float: right;
+  width: 48%;
+}
+.wpt_workoutplan_purchase .account_step > .login,
+.wpt_workoutplan_purchase .account_step > .register {
+  border: solid 1px #d8d8d8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 30px;
+}
+.wpt_workoutplan_purchase .account_step .head {
+  margin-bottom: 20px;
+}
+.wpt_workoutplan_purchase .account_step .head h3 {
+  margin-bottom: 2px;
+}
+.wpt_workoutplan_purchase .account_step .head cite {
+  font-style: normal;
+  font-size: 0.95em;
+}
+.wpt_workoutplan_purchase .account_step form label {
+  display: block;
+  margin-bottom: 4px;
+}
+.wpt_workoutplan_purchase .account_step form input[type="text"],
+.wpt_workoutplan_purchase .account_step form input[type="password"] {
+  width: 100%;
+}
+.wpt_workoutplan_purchase .account_step form p {
+  display: block;
+  zoom: 1;
+}
+.wpt_workoutplan_purchase .account_step form p:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_workoutplan_purchase .account_step form p .column {
+  display: block;
+  width: 48%;
+  float: left;
+}
+.wpt_workoutplan_purchase .account_step form p .column:last-child {
+  float: right;
+}
+.wpt_workoutplan_purchase .account_step form .wpt_errors {
+  margin-bottom: 25px;
+  font-size: 0.9em;
+}
+.wpt_workoutplan_purchase .account_step form .wpt_errors > *:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f071';
+  margin-right: 4px;
+}
+.wpt_workoutplan_purchase .payment_step {
+  text-align: center;
+}
+.wpt_workoutplan_purchase .payment_step .date {
+  font-size: 0.9em;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+.wpt_workoutplan_purchase .payment_step .intro p {
+  margin-bottom: 2px;
+}
+.wpt_workoutplan_purchase .payment_step .intro .welcome {
+  font-size: 1.1em;
+}
+.wpt_workoutplan_purchase .payment_step .workoutplan_teaser {
+  background: #222;
+  background-size: cover;
+  color: #FFF;
+  display: inline-block;
+  padding: 50px 100px;
+  margin: 20px 0;
+  min-width: 70%;
+}
+.wpt_workoutplan_purchase .payment_step .payment_methods {
+  margin-top: 15px;
+}
+.wpt_workoutplan_purchase .payment_step .payment_methods .paypal {
+  display: inline-block;
+  width: 262px;
+  height: 79px;
+  background: url('images/paypal.png') no-repeat center center;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .wpt_workoutplan_purchase .payment_step .payment_methods .paypal {
+    background-image: url('images/paypal@2x.png');
+    background-size: 261px 79px;
+  }
+}
+.wpt_workoutplan_purchase .payment_step .actions {
+  margin-top: 30px;
+}
+.wpt_workoutplan_purchase .done_step {
+  text-align: center;
+}
+.wpt_workoutplan_purchase .done_step .success_icon {
+  width: 157px;
+  height: 99px;
+  background: url('images/success.gif') no-repeat 0 0;
+  background-size: cover;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.wpt_workoutplan_purchase .done_step .button {
+  margin-bottom: 15px;
+}
+.wpt_workoutplan_purchase .error_notice {
+  background: #fbfbfb;
+  color: #923434;
+  font-weight: 600;
+  padding: 20px 40px 25px;
+  margin: 25px;
+}
+.wpt_workoutplan_purchase .error_notice:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f071';
+  display: block;
+  font-size: 20px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ WorkoutPlan Finder Shortcode (workoutplans.less)
+== ------------------------------------------------------------------- ==
+*/
+.wpt_workoutplan_finder {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.95em;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+.wpt_workoutplan_finder .step {
+  width: 100%;
+  padding: 0px;
+}
+.wpt_workoutplan_finder .step_desc {
+  margin-bottom: 15px;
+}
+.wpt_workoutplan_finder .step_choices > a {
+  display: inline-block !important;
+  margin: 0 5px;
+}
+.wpt_workoutplan_finder .step_choices > a img {
+  display: block;
+  max-width: 150px;
+}
+.wpt_workoutplan_finder .step_choices > a label {
+  display: block;
+  background: #cb1313;
+  color: #FFF;
+  padding: 8px 18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.wpt_workoutplan_finder .step_choices > a:hover label {
+  background: #149FB8;
+}
+.wpt_workoutplan_finder .back {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 0.9em;
+  opacity: 0;
+}
+.wpt_workoutplan_finder .back:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f177';
+  margin-right: 5px;
+}
+.wpt_workoutplan_finder .back.visible {
+  opacity: 1;
+}
+.wpt_workoutplan_finder .step {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+  transition-duration: 0.05s;
+}
+.wpt_workoutplan_finder .step.active {
+  opacity: 1;
+  visibility: visible;
+  position: static;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.wpt_workoutplan_finder .choice:active {
+  position: relative;
+  top: 1px;
+}
+.wpt_workoutplan_finder .step .step_desc {
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  opacity: 0;
+}
+.wpt_workoutplan_finder .step.active .step_desc {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.wpt_workoutplan_finder .hide_fast {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0;
+}
+.winner_megamenu_wrapper .wpt_workoutplan_finder .step_desc {
+  display: none;
+}
+.winner_megamenu_wrapper .wpt_workoutplan_finder .back {
+  display: none !important;
+}
+.winner_megamenu_wrapper .wpt_workoutplan_finder .step_choices img {
+  max-width: 137px;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Nutrition Facts Shortcode
+== ------------------------------------------------------------------- ==
+*/
+.wpt_nutrition_facts {
+  border: 1px solid #212121;
+  padding: 18px 20px 14px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  max-width: 300px;
+}
+.wpt_nutrition_facts .head {
+  border-bottom: 3px solid #212121;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.wpt_nutrition_facts .title {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.wpt_nutrition_facts .subtitle {
+  font-size: 0.9em;
+}
+.wpt_nutrition_facts table,
+.wpt_nutrition_facts table td {
+  border: none !important;
+}
+.wpt_nutrition_facts table {
+  margin-bottom: 0;
+}
+.wpt_nutrition_facts table td {
+  padding: 5px 0;
+  background: transparent !important;
+  border-bottom: 1px solid #212121 !important;
+}
+.wpt_nutrition_facts table tr td:last-child {
+  text-align: right;
+}
+.wpt_nutrition_facts table tr {
+  background: transparent !important;
+}
+.wpt_nutrition_facts table tr:last-child td {
+  border-bottom: none !important;
+}
+/*
+== ------------------------------------------------------------------- ==
+== @@ Meal Shortcode
+== ------------------------------------------------------------------- ==
+*/
+.wpt_meal_shortcode {
+  border: 1px solid #eaeaea;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 30px;
+  display: block;
+  zoom: 1;
+}
+.wpt_meal_shortcode:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_meal_shortcode.with_image .main_info {
+  width: 60%;
+  float: right;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.wpt_meal_shortcode.with_image .side_info {
+  width: 40%;
+  float: left;
+}
+.wpt_meal_shortcode .subtitle {
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.wpt_meal_shortcode .title {
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+}
+.wpt_meal_shortcode .head {
+  margin-bottom: 15px;
+}
+.wpt_meal_shortcode .description {
+  margin-bottom: 15px;
+}
+.wpt_meal_shortcode .thumbnail {
+  margin-bottom: 0 !important;
+}
+.wpt_meal_shortcode .thumbnail img {
+  display: block;
+}
+.wpt_meal_shortcode .obs {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.wpt_meal_shortcode .nutrition_facts {
+  margin: 0 -15px;
+}
+.wpt_meal_shortcode .nutrition_facts > div {
+  display: inline-block;
+  padding: 0 15px;
+}
+.wpt_meal_shortcode .nutrition_facts label {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  display: block;
+}
+.wpt_meal_shortcode .nutrition_facts span {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.wpt_meal_shortcode .ingredients {
+  margin-bottom: 20px;
+}
+.wpt_meal_shortcode .ingredients .ingredient {
+  background: #fff;
+  position: relative;
+  display: block;
+  zoom: 1;
+  margin-bottom: 4px;
+}
+.wpt_meal_shortcode .ingredients .ingredient:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wpt_meal_shortcode .ingredients .ingredient:last-child {
+  margin-bottom: 0;
+}
+.wpt_meal_shortcode .ingredients .ingredient .name {
+  float: left;
+  padding-right: 10px;
+  font-weight: bold;
+}
+.wpt_meal_shortcode .ingredients .ingredient .quantity {
+  float: right;
+  padding-left: 10px;
+}
+.wpt_meal_shortcode .ingredients .ingredient .name,
+.wpt_meal_shortcode .ingredients .ingredient .quantity {
+  background: #fff;
+  position: relative;
+}
+.wpt_meal_shortcode .ingredients .ingredient:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0px;
+  border-bottom: dashed 1px #d5d5d5;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
+.wpt_meal_shortcode .responsive_thumbnail {
+  display: none;
+}
+.wpt_meal_shortcode.with_image .nutrition_facts {
+  display: none;
+}
+.wpt_meal_shortcode.with_image .thumbnail .nutrition_facts {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -5px;
+}

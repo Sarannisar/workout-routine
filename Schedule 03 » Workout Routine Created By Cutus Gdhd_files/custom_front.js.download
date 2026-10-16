@@ -1,0 +1,32 @@
+(function($) {
+	$(function() {
+		
+		if( $('.my_profile_wrap').length>0 ){
+			$('.ogrenciler_sec')
+			  .dropdown({
+				clearable: true,
+				placeholder: 'Select students',
+				useLabels: false,
+				// apiSettings: {
+				// 	// this url parses query server side and returns filtered results
+				// 	url: '//api.semantic-ui.com/tags/{query}'
+				// },
+			  })
+			;
+			$('.js-example-basic-multiple').select2({
+				placeholder: "Select your student(s)",
+				allowClear: true,
+				tags: false
+			});
+			$(".kendisi .tek_prog_exc_list").sortable();
+			$('input').on('click', function(){
+				$(this).focus();
+			});
+			$(".kendisi .tek_prog_exc_list").draggable();
+
+		}
+		
+		$('.woocommerce .winner_wc_product_single .product_summary .summary form.cart.variations_form td > div:eq(0)').click();
+		
+	});
+})( jQuery );

@@ -1,0 +1,21 @@
+# Build outputs and temporary caches
+android_project/.gradle/
+android_project/build/
+android_project/app/build/
+android_project/local.properties
+.gradle/
+build/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS metadata
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary scripts
+*.pyc
+__pycache__/

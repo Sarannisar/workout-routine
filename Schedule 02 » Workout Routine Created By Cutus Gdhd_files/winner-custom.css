@@ -1,0 +1,71 @@
+/* @@ page header */
+.page_header {
+	height: 90px;
+}
+.page_header .page_menu > div > ul > li > a {
+	line-height: 90px;
+}
+
+
+body {
+	font-family: "Open Sans";
+}
+
+.sc85_iconbox.clean_left_aligned .title,
+.sc85_iconbox.clean_right_aligned .title {
+	font-family: "Open Sans";
+}
+
+
+h1, h2, h3, h4, h5, h6,
+.page_title,
+.wpt_weekly_classes_schedule .classes .class_entry .name,
+.sc85_heading.regular .title,
+.sc85_heading.impact .title,
+.sc85_counter.digital_clock .counter_description label {
+	font-family: "Oswald";
+font-weight: 400;
+}
+
+
+.page_header .page_menu .menu > li > a {
+	font-family: "Oswald";
+font-size: 17px;
+font-weight: 400;
+}
+
+
+.page_header .page_menu .menu .sub-menu > li > a {
+	font-family: "Oswald";
+font-size: 14px;
+}
+
+
+.sc85_button .button,
+a.button,
+button,
+input[type="submit"] {
+	font-family: "Oswald";
+font-size: 16px;
+}
+
+/* @@ custom css */
+.shop_product_iconboxes .sc85_iconbox {
+    margin-bottom: 7px;
+}
+
+.page_menu .wpcf7 {
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 568px) {
+    .wpt_workout_single .exercises_list .thumbnails,
+    .wpt_exercise_archive .entry .thumbnails {
+            width: 100%;
+            padding: 10px 0;
+            margin: 10px 0;
+            display: block;
+            height: 160px;
+            text-align: left;
+    }
+}

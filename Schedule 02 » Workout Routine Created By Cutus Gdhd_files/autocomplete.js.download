@@ -1,0 +1,71 @@
+jQuery(function($) {
+
+    $('.student_search').autocomplete({
+        
+		source: function(request, response) {
+            $('.student_finder_dropdown').html('');
+
+			$.ajax({
+				dataType: 'json',
+				url: AutocompleteSearch.ajax_url,
+				data: {
+					term: request.term,
+					action: 'autocompleteSearch',
+					security: AutocompleteSearch.ajax_nonce,
+				},
+				success: function(data) {
+					response(data);
+                    console.log(data);
+
+                    if(data.length>0){
+
+                        var ekle = '<ul>';
+
+                        data.forEach( (student) => {
+                           ekle += '<li data-id="'+student["id"]+'" data-uname="'+student["user_login"]+'"><span>'+student["display_name"]+'</span><a href="#">ADD</a></li>';
+                        });
+
+                        ekle += '</ul>';
+                        
+                    }else{
+                        var ekle = '<div>User can not be found!</div>';
+                    }
+                    $('.student_finder_dropdown').html(ekle);
+
+				}
+			});
+		},
+	});
+
+    $(document).on('click', '.student_finder_dropdown a', function(e){
+        e.preventDefault();
+        
+        var id = $(this).parent().attr('data-id');
+        var uname = $(this).parent().attr('data-uname');
+
+        if($('.students_pool li[data-id="'+id+'"]').length==0){
+            $('.students_pool ul').append('<li class="" data-id="'+id+'"><span>'+uname+'</span> <a href="#" class="remove_student_from_pool" data-id="'+id+'">X</a> <input type="hidden" name="students[]" value="'+id+'"> </li>');
+        }
+        $('.student_finder_dropdown').html('');
+        $('input.student_search.ui-autocomplete-input').val('');
+        return false;
+    });
+
+    $(document).on('click', 'body', function(e){
+        $('.student_finder_dropdown').html('');
+    });
+    $(document).on('change', '.student_search', function(e){
+        if($(this).val()==''){
+            $('.student_finder_dropdown').html('');
+        }
+    });
+
+    $(document).on('click', 'a.remove_student_from_pool', function(e){
+        e.preventDefault();
+        $(this).parent().remove();
+        $('.student_finder_dropdown').html('');
+        $('input.student_search.ui-autocomplete-input').val('');
+        return false;
+    });
+
+});
